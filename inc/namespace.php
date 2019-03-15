@@ -3,9 +3,17 @@
 namespace CG\Hreflangs;
 
 function create_hreflangs() {
+	if ( ! is_singular() ) {
+		return;
+	}
+
+	$idPost = get_queried_object_id();
+
+	if ( 0 === $idPost ) {
+		return;
+	}
 
 	$idOriginalSite = get_current_blog_id();
-	$idPost = get_the_id();
 	$postmeta = get_post_meta( $idPost );
 	$sites = get_sites();
 
