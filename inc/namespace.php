@@ -39,7 +39,7 @@ function create_hreflangs() {
 			}
 
 			$url = get_permalink( $idSyncedPost );
-			if ( ! empty( $url ) && ! strpos( $url, 'preview=true' ) ) {
+			if ( ! empty( $url ) && ! strpos( $url, 'preview=true' ) && ! strpos( $url, 'preview_id' ) ) {
 				$hreflang = trim( get_site( $idSyncedSite )->path, '/' );
 				echo '<link rel="alternate" href="' . esc_url( $url ) . '" hreflang="' . esc_html( $hreflang ) . '" />' . "\n";
 			}
