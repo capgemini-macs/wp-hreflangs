@@ -41,7 +41,7 @@ function create_hreflangs() {
 			$url = get_permalink( $idSyncedPost );
 			if ( ! empty( $url ) && ! strpos( $url, 'preview=true' ) && ! strpos( $url, 'preview_id' ) ) {
 				$hreflang = trim( get_site( $idSyncedSite )->path, '/' );
-				echo '<link rel="alternate" href="' . esc_url( $url ) . '" hreflang="' . esc_html( $hreflang ) . '" />' . "\n";
+				echo '<link rel="alternate" href="' . esc_url( $url ) . '" hreflang="' . esc_attr( $hreflang ) . '" />' . "\n";
 			}
 		}
 	}
@@ -52,7 +52,7 @@ add_action( 'wp_head', __NAMESPACE__ . '\\create_hreflangs' );
 
 
 function checkIfBlogExists( $id, $array ) {
-	foreach ( $array as $key => $val ) {
+	foreach ( $array as $val ) {
 		if ( (int) $val->blog_id === $id ) {
 			return true;
 		}
