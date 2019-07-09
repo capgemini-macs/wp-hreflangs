@@ -1,7 +1,24 @@
 {
-    "name": "capgemini-macs/2817-cg-hreflangs",
-    "type": "wordpress-plugin",
-    "require": {
-        "composer/installers": "v1.0.6"
-    }
+	"name": "capgemini-macs/hreflangs",
+	"description": "Wordpress Hreflang plugin",
+	"homepage": "https://github.com/capgemini-macs/wp-hreflangs",
+	"keywords": [
+		"wordpress"
+	],
+	"license": "GPL-2.0+",
+	"authors": [
+		{
+			"name":"Capgemini MACS",
+			"email":"edge-support.global@capgemini.com",
+			"homepage":"http://capgemini.com/"
+		}
+	],
+	"support"    : {
+			"issues": "https://github.com/capgemini-macs/wp-hreflangs/issues",
+			"source": "https://github.com/capgemini-macs/wp-hreflangs"
+	},
+	"type": "wordpress-plugin",
+	"require": {
+		"composer/installers": "~1.0"
+	 }
 }
