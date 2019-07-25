@@ -33,7 +33,7 @@ function create_hreflangs() {
 	}
 
 	// print synced sites urls
-	for ( $idSyncedSite = 1; $idSyncedSite < count( $sites ); $idSyncedSite++ ) {
+	for ( $idSyncedSite = 1; $idSyncedSite <= count( $sites ); $idSyncedSite++ ) {
 		if ( array_key_exists( 'ea-syncable-post-synced-to-' . $idSyncedSite, $postmeta ) ) {
 			$idSyncedPost = $postmeta[ 'ea-syncable-post-synced-to-' . $idSyncedSite ][0];
 
