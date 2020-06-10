@@ -6,10 +6,12 @@ Adds [Hreflang](https://en.wikipedia.org/wiki/Hreflang) link attributes to <head
 
 The plugin doesn't have settings, enable it.
 
-Wordpress Hreflang plugin required active Extendable Aggregator plugin to work.
+In case of any hreflangs issues inspect ‘ea-syncable-post-synced-to-‘ meta on global and ‘ea-syncable-import-src-id-canonical’ on local sites. They should match for hreflang links to be created
 
-When we want replace existing site on global site by new we must change meta values on new sites: 'ea-syncable-post-synced-to- ' on global and 'ea-syncable-import-src-id-canonical' existing locals sites. We can create this meta keys by syndicate that site to local site (remember to delete 'draft' site from local sites!).
+If not:
 
-Also when we want replace local site to new we must change meta values on global and local site.
+When we want to reconnect existing page from global site with new one on local site (or new page on global with existing page on local) we must change meta values on both pages: 'ea-syncable-post-synced-to- ' on global and 'ea-syncable-import-src-id-canonical' existing locals sites. If proper 'ea-syncable-post-synced-to- ' doesn’t exist we can create this meta keys by syndicate that page to local site (remember to delete 'draft' site from local sites!).
+
+Also when we want to replace local page to the new one we must change meta values on both global and local sites.
 
 
